@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @delivery.item %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @delivery.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @delivery.phone %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @delivery.size %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @delivery.time %>
+</p>
+
+<%= link_to 'Edit', edit_delivery_path(@delivery), class: "btn btn-link"  %> |
+<%= link_to 'Back', deliveries_path, class: "btn btn-link"  %>
