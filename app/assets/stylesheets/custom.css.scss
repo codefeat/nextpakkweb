@@ -1,0 +1,45 @@
+.jumbotron {
+	background-color: #f9ab23 !important;
+	border: 1px solid #0069ff;	
+
+	h1{
+	color: #0069ff !important;
+	}
+
+	p{
+	color: #f9ab23;
+    font-weight: bold !important;
+	}
+
+	h2{
+	color:#c41200 !important;
+	font-weight: bold;
+	}
+}
+
+.navbar-default {
+	.container-fluid {	
+	background-color: #ffffff;
+	.navbar-nav > li > a{
+	color:#000000;
+	font-size: 16px;
+	font-weight: bold;
+	}
+	.navbar-brand {
+	color:#f9ab23;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'Days One', sans-serif;
+	text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1x 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff;
+	}
+	}
+}
+
+.container-fluid {
+	padding: 10px 120px !important;
+
+}
+
+.jumbotron {
+background-image: url("https://s3.amazonaws.com/nextpakk/Delivery-man-makes-his-rounds.jpg");
+background-size: cover;}
