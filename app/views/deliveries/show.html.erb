@@ -1,32 +1,45 @@
 
-<div id="imgZ" style="width: 300px; min-height: 240px; padding-bottom: 10px;"><%= image_tag @delivery.image_url, class: "img-responsive" %>
+<div class="row">
+  <div class="col-md-4">
+    <div id="imgZ" style="width: 300px; min-height: 240px; padding-bottom: 10px; border-radius: 60px !important;"><%= image_tag @delivery.image_url, class: "img-responsive img-circle" %>
+    </div>
+      <p>
+        <h2><strong>Item:</strong>
+        <%= @delivery.item %></h2>
+      </p>
+
+      <p>
+        <strong>Address:</strong>
+        <%= link_to @delivery.address, "http://maps.google.com/?q=#{@delivery.address}" %> 
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <%= @delivery.phone %>
+      </p>
+
+      <p>
+        <strong>Size:</strong>
+        <%= @delivery.size %>
+      </p>
+
+      <p>
+        <strong>Time:</strong>
+        <%= @delivery.time %>
+      </p>
+
+      <%= link_to "Write A Review", new_delivery_review_path(@delivery), class: "btn btn-primary" %>
+    </div>
+    <div class="col-md-8">
+    <% if @reviews.blank? %>
+        <h3>No reviews yet. Be the first to write one!</h3>
+    <% else %>
+        <% @reviews.each do |review| %>
+        <p><%= review.rating %></p>
+        <p><%= review.comment %></p>
+      <% end %>
+    <% end %>
+    </div>
 </div>
-<p>
-  <strong>Item:</strong>
-  <%= @delivery.item %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @delivery.address %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @delivery.phone %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @delivery.size %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @delivery.time %>
-</p>
-
-<%= link_to "Write A Review", new_delivery_review_path(@delivery), class: "btn btn-primary" %><br />
-
 <%= link_to 'Edit', edit_delivery_path(@delivery), class: "btn btn-link"  %> |
 <%= link_to 'Back', deliveries_path, class: "btn btn-link"  %>
