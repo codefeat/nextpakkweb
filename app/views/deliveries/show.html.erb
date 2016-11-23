@@ -26,5 +26,7 @@
   <%= @delivery.time %>
 </p>
 
+<%= link_to "Write A Review", new_delivery_review_path(@delivery), class: "btn btn-primary" %><br />
+
 <%= link_to 'Edit', edit_delivery_path(@delivery), class: "btn btn-link"  %> |
 <%= link_to 'Back', deliveries_path, class: "btn btn-link"  %>
