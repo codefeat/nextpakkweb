@@ -20,7 +20,8 @@
     <% @deliveries.each do |delivery| %>
       <tr>
         <td><%= delivery.item %></td>
-        <td><%= delivery.address %></td>
+        <td><%= link_to delivery.address, "http://maps.google.com/?q=#{delivery.address}" %>          
+        </td> 
         <td><%= delivery.phone %></td>
         <td><%= delivery.size %></td>
         <td><%= delivery.time %></td>
